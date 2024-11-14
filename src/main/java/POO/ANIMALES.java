@@ -10,6 +10,10 @@ package POO;
  */
 public class ANIMALES extends javax.swing.JFrame {
 
+    private Object txtBoca;
+    private Object txtCola;
+    private Object txtArea;
+
     /**
      * Creates new form ANIMALES
      */
@@ -27,21 +31,33 @@ public class ANIMALES extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        lblPelo = new javax.swing.JLabel();
+        lblCola = new javax.swing.JLabel();
+        txtcola = new javax.swing.JTextField();
+        txtPelo = new javax.swing.JTextField();
         btnAgregar = new javax.swing.JButton();
+        txtOjos = new javax.swing.JTextField();
+        txtboca = new javax.swing.JTextField();
+        lblBoca = new javax.swing.JLabel();
+        txtPatas = new javax.swing.JTextField();
+        lblOjos = new javax.swing.JLabel();
+        lblPatas = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("PELO");
+        lblPelo.setText("PELO");
 
-        jLabel2.setText("COLA");
+        lblCola.setText("COLA");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        txtcola.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txtcolaActionPerformed(evt);
+            }
+        });
+
+        txtPelo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPeloActionPerformed(evt);
             }
         });
 
@@ -52,40 +68,81 @@ public class ANIMALES extends javax.swing.JFrame {
             }
         });
 
+        txtOjos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtOjosActionPerformed(evt);
+            }
+        });
+
+        txtboca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtbocaActionPerformed(evt);
+            }
+        });
+
+        lblBoca.setText("BOCA");
+
+        txtPatas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatasActionPerformed(evt);
+            }
+        });
+
+        lblOjos.setText("OJOS");
+
+        lblPatas.setText("PATAS");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnAgregar)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextField2))))
-                .addContainerGap(258, Short.MAX_VALUE))
+                .addGap(75, 75, 75)
+                .addComponent(btnAgregar)
+                .addGap(244, 244, 244))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblPelo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCola, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblBoca, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblOjos, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblPatas, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtboca, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
+                            .addComponent(txtOjos)
+                            .addComponent(txtPelo)
+                            .addComponent(txtcola)
+                            .addComponent(txtPatas))))
+                .addGap(0, 338, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(13, 13, 13))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addGap(38, 38, 38)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
+                    .addComponent(txtPelo, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                    .addComponent(lblPelo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtboca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblBoca))
+                .addGap(14, 14, 14)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtcola, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCola, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtOjos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblOjos))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPatas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPatas))
+                .addGap(47, 47, 47)
                 .addComponent(btnAgregar)
                 .addGap(43, 43, 43))
         );
@@ -96,7 +153,7 @@ public class ANIMALES extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 2, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,13 +163,34 @@ public class ANIMALES extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtPeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPeloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtPeloActionPerformed
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
              // TODO add your handling code here:
+    String pelo1 = txtPelo.getText();
+    String boca1 = txtboca.getText();
+    String cola1 = txtcola.getText();
+    String Ojos1 = txtOjos.getText();
+    String patas1 = txtPatas.getText();
     }//GEN-LAST:event_btnAgregarActionPerformed
+
+    private void txtbocaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtbocaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtbocaActionPerformed
+
+    private void txtcolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcolaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcolaActionPerformed
+
+    private void txtOjosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOjosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtOjosActionPerformed
+
+    private void txtPatasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,10 +229,16 @@ public class ANIMALES extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JLabel lblBoca;
+    private javax.swing.JLabel lblCola;
+    private javax.swing.JLabel lblOjos;
+    private javax.swing.JLabel lblPatas;
+    private javax.swing.JLabel lblPelo;
+    private javax.swing.JTextField txtOjos;
+    private javax.swing.JTextField txtPatas;
+    private javax.swing.JTextField txtPelo;
+    private javax.swing.JTextField txtboca;
+    private javax.swing.JTextField txtcola;
     // End of variables declaration//GEN-END:variables
 }
